@@ -7,20 +7,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
+import { BackendService } from './backend.service';
+import { ProductoService } from './producto.service';
+import { ListarProductosComponent } from './listar-productos/listar-productos.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ListarProductosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [
+    BackendService,
+    ProductoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
