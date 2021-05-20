@@ -17,3 +17,9 @@ El diagrama Entidad Relación para el modalo de seguridad:
 ```
 SEMILLERO.postman_collection
 ```
+## Ejercicio Clase 11
+- Se crea la clase **Producto.ts** que define el objeto con sus atributos
+- Se crea un servicio llamado **backend.service.ts** el cual nos permite inicializar un arreglo de objetos de la clase Producto y tener un metodo que según el tipo, pueden haber por ejemplo arreglos de Insumos, y devuelve ese arreglo segun se requiera.
+- Se crea un segundo servicio llamado **producto.service** dicho servicio tiene una variable de productos que es un arreglo de Producto la cual se inicializa desde la funcion getProductos haciendo el llamado al backend.servicie y obtener el arreglo por el tipo indicado
+- Se crea el componente listar-productos el cual utiliza el servicio de producto.service para hacer el llamado a la función y obtener los productos para ser mostrados en una tabla en el html
+- En este archivo se crea la función borrarProducto que tras confirmación elimina el producto del arreglo y renderiza nuevamente las filas cambiando de estado una variable para mostrar un mensaje.
